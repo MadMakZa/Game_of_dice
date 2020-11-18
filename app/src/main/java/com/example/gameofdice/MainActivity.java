@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dice dice1 = new Dice();
-                Log.d("Create dice", "На кубике выпало: " + dice1.generateRandomNumber());
+
             }
         }
         );
