@@ -6,12 +6,11 @@ public class Player extends RollOfTheDice {
         super.createDices();
     }
 
-//    @Override
-//    public int sumOfPoints() {
-//        super.sumOfPoints();
-//        return sumOfPoints();
-//    }
-//
+    @Override
+    public void sumOfPoints() {
+        super.sumOfPoints();
+    }
+
     @Override
     public void showPoints() {
         super.showPoints();

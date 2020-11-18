@@ -46,9 +46,8 @@ public abstract class RollOfTheDice {
     }
 
     //логика подсчета очков
-    public int sumOfPoints(){
-        sumPoints = cube1+cube2+cube3;
-        return sumPoints;
+    public void sumOfPoints(){
+        sumPoints = getCube1()+getCube2()+getCube3();
     }
 
     //вывод результата на экран
