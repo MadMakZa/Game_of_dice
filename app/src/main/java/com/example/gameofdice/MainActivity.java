@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Player player1 = new Player();
+                player1.createDices();
+//                player1.sumOfPoints();
+                player1.showPoints();
             }
         }
         );
