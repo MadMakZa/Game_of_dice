@@ -5,10 +5,12 @@ import android.util.Log;
 
 public class Dice {
     //диапазон разброса
-    private static final int A = 1;
-    private static final int B = 6;
+    private final int a = 1;
+    private final int b = 6;
 
-    int random_number = A + (int) (Math.random() * B);
-    Log.d("Dice","Кубик выпал на: " );
+    public int randomNumber(int a, int b) {
+        int random_number = a + (int) (Math.random() * b);
+        return random_number;
+    }
 
 }
