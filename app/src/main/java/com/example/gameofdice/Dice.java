@@ -8,7 +8,7 @@ public class Dice {
     private final int a = 1;
     private final int b = 6;
 
-    public int randomNumber(int a, int b) {
+    public int generateRandomNumber() {
         int random_number = a + (int) (Math.random() * b);
         return random_number;
     }
