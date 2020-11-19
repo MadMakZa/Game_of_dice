@@ -47,7 +47,6 @@ public abstract class RollOfTheDice {
 
     //логика подсчета очков
     public void sumOfPoints(){
-        sumPoints = getCube1()+getCube2()+getCube3();
         //бонусы за 2 одинаковых кубика
         if(cube1==cube2||cube2==cube3||cube1==cube3){
             sumPoints += 2;
@@ -56,6 +55,7 @@ public abstract class RollOfTheDice {
         if(cube1==cube2 && cube1==cube3){
             sumPoints +=1;
         }
+        sumPoints += getCube1()+getCube2()+getCube3();
     }
 
     //вывод результата на экран
