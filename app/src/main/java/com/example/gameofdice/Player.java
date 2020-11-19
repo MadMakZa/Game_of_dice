@@ -1,6 +1,7 @@
 package com.example.gameofdice;
 
 public class Player extends RollOfTheDice {
+
     @Override
     public void createDices() {
         super.createDices();

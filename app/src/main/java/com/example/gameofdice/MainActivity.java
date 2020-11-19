@@ -25,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
                 player1.createDices();
                 player1.sumOfPoints();
                 player1.showPoints();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                Computer comp1 = new Computer();
+                comp1.createDices();
+                comp1.sumOfPoints();
+                comp1.showPoints();
             }
         }
         );
