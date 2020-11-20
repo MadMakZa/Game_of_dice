@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 StartGame startGame = new StartGame();
                 startGame.CreatePlayers();
+                startGame.CreateComputer();
 
             }
         }

@@ -61,6 +61,7 @@ public abstract class RollOfTheDice {
            cube3+1 == cube1 && cube3+2 == cube2){
             sumPoints +=3;
         }
+        //сумма выпавших значений кубиков + бонусы, если есть
         sumPoints += getCube1()+getCube2()+getCube3();
     }
 

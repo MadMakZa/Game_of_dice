@@ -11,7 +11,14 @@ public class StartGame extends Thread {
         player1.showPoints();
     }
     //Создать computer
+    public void CreateComputer(){
+        Computer comp1 = new Computer();
+        comp1.createDices();
+        comp1.sumOfPoints();
+        comp1.showPoints();
+    }
     //Сравнить результаты бросков
+
     //Вывод победителя
     //Завершение и обновление
 
