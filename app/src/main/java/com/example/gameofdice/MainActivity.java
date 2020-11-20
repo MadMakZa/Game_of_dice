@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 StartGame startGame = new StartGame();
                 startGame.CreatePlayers();
                 startGame.CreateComputer();
+                startGame.CompareResults();
 
             }
         }

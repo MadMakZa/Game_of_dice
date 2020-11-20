@@ -31,7 +31,8 @@ public class StartGame extends Thread {
         }
         if(playerPoints < computerPoints){
             Log.d("Если победил комп", "Computer is winner!");
-        }else {
+        }
+        if(playerPoints == computerPoints){
             Log.d("Ничья", "Draw!");
         }
     }
