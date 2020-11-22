@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         //анимация
         cubeAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.cube_anim);
         cubeImage1 = findViewById(R.id.cube_1);
+        cubeImage1.setImageResource(R.drawable.cube1);
+
         //запуск анимации
         cubeImage1.startAnimation(cubeAnim);
 
