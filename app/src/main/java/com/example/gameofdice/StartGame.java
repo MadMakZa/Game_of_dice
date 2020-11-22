@@ -2,7 +2,7 @@ package com.example.gameofdice;
 
 import android.util.Log;
 
-public class StartGame extends Thread {
+public class StartGame {
     /***Этапы игры ***/
 
     private int playerPoints;

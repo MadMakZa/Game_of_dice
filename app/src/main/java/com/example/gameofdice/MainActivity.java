@@ -2,6 +2,7 @@ package com.example.gameofdice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,33 +14,60 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private Button roll;
-    private Animation cubeAnim;
-    private ImageView cubeImage1;
-    private ImageView cubeImage2;
-    private ImageView cubeImage3;
+    public ImageView cubeImageView1;
+    public ImageView cubeImageView2;
+    public ImageView cubeImageView3;
+
+    public ImageView getCubeImageView1() {
+        return cubeImageView1;
+    }
+    public void setCubeImageView1(ImageView cubeImageView1) {
+        this.cubeImageView1 = cubeImageView1;
+    }
+    public ImageView getCubeImageView2() {
+        return cubeImageView2;
+    }
+    public void setCubeImageView2(ImageView cubeImageView2) {
+        this.cubeImageView2 = cubeImageView2;
+    }
+    public ImageView getCubeImageView3() {
+        return cubeImageView3;
+    }
+    public void setCubeImageView3(ImageView cubeImageView3) {
+        this.cubeImageView3 = cubeImageView3;
+    }
+
+
+    //для получения доступа к изменению переменных в этом классе
+    private static MainActivity instance;
+    public static MainActivity getInstance(){
+        return instance;
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        instance = this;
 
-        //анимация
-        cubeAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.cube_anim);
-        cubeImage1 = findViewById(R.id.cube_1);
-        cubeImage1.setImageResource(R.drawable.cube1);
+        //присвоение переменным местоположение кубиков
+        cubeImageView1 = (ImageView) findViewById(R.id.cube_1);
+        cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
+        cubeImageView3 = (ImageView) findViewById(R.id.cube_3);
 
-        //запуск анимации
-        cubeImage1.startAnimation(cubeAnim);
-
-        //test cube
+        //кнопка бросить кубики
         roll = (Button) findViewById(R.id.roll);
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 StartGame startGame = new StartGame();
                 startGame.CreatePlayers();
-                startGame.CreateComputer();
+//                startGame.CreateComputer();
                 startGame.CompareResults();
+
 
             }
         }

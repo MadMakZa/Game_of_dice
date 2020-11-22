@@ -5,6 +5,9 @@ package com.example.gameofdice;
  * */
 
 import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public abstract class RollOfTheDice {
     //локальные переменные для работы со значениями
@@ -67,10 +70,66 @@ public abstract class RollOfTheDice {
 
     //вывод результата на экран
     public void showPoints(){
+        if(cube1 == 1){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
+        }
+        if(cube1 == 2){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube2);
+        }
+        if(cube1 == 3){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube3);
+        }
+        if(cube1 == 4){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube4);
+        }
+        if(cube1 == 5){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube5);
+        }
+        if(cube1 == 6){
+            MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube6);
+        }
+        if(cube2 == 1){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube1);
+        }
+        if(cube2 == 2){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube2);
+        }
+        if(cube2 == 3){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube3);
+        }
+        if(cube2 == 4){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube4);
+        }
+        if(cube2 == 5){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube5);
+        }
+        if(cube2 == 6){
+            MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube6);
+        }
+        if(cube3 == 1){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube1);
+        }
+        if(cube3 == 2){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube2);
+        }
+        if(cube3 == 3){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube3);
+        }
+        if(cube3 == 4){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube4);
+        }
+        if(cube3 == 5){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube5);
+        }
+        if(cube3 == 6){
+            MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
+        }
         Log.d("Бросок", "[" + getCube1()+ "]" +
                 "[" + getCube2() +"]" +
                 "[" + getCube3() +"]" +
                 "Points: " + getSumPoints());
+
+
     }
 
 }
