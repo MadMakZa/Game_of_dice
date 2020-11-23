@@ -17,7 +17,15 @@ public class MainActivity extends AppCompatActivity {
     public ImageView cubeImageView1;
     public ImageView cubeImageView2;
     public ImageView cubeImageView3;
+    public Animation cubeAnim;
 
+    public Animation getCubeAnim() {
+        return cubeAnim;
+    }
+
+    public void setCubeAnim(Animation cubeAnim) {
+        this.cubeAnim = cubeAnim;
+    }
 
     public ImageView getCubeImageView1() {
         return cubeImageView1;

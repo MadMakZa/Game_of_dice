@@ -11,7 +11,7 @@ import android.widget.ImageView;
  * */
 
 public class Dice {
-    private Animation cubeAnim;
+
     //диапазон разброса
     private final int a = 1;
     private final int b = 6;
