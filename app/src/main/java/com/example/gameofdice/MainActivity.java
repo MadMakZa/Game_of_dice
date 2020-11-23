@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public ImageView cubeImageView2;
     public ImageView cubeImageView3;
 
+
     public ImageView getCubeImageView1() {
         return cubeImageView1;
     }

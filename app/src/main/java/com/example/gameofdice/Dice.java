@@ -26,16 +26,5 @@ public class Dice {
         return random_number;
     }
 
-    enum DiceVisual {
 
-        ONE {
-            public Animation cubeAnim;
-            private ImageView cubeImage = (ImageView) findViewById(R.id.cube_1);
-
-            public void DiceImageAnimation () {
-                cubeAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.cube_anim);
-                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
-            }
-        },
-    }
 }
