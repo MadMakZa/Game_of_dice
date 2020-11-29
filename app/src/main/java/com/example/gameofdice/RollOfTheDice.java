@@ -135,6 +135,7 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
                 break;
         }
+        //вывод суммы очков на экран
         MainActivity.getInstance().getScoreRound().setText(Integer.toString(sumPoints));
 
 
