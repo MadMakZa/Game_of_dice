@@ -138,7 +138,7 @@ public abstract class RollOfTheDice {
         //вывод суммы очков на экран
         MainActivity.getInstance().getScoreRound().setText(Integer.toString(sumPoints));
 
-
+        //для разработчика
         Log.d("Бросок", "[" + getCube1()+ "]" +
                 "[" + getCube2() +"]" +
                 "[" + getCube3() +"]" +
