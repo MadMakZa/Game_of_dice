@@ -62,7 +62,10 @@ public abstract class RollOfTheDice {
         //бонусы за street
         if(cube1+1 == cube2 && cube1+2 == cube3 ||
            cube2+1 == cube1 && cube2+2 == cube3 ||
-           cube3+1 == cube1 && cube3+2 == cube2){
+           cube3+1 == cube1 && cube3+2 == cube2 ||
+           cube2-1 == cube1+1 && cube2-1 == cube3 ||
+           cube3-1 == cube2 && cube3-2 == cube1 ||
+           cube1-1 == cube2 && cube1-2 == cube3){
             sumPoints +=3;
         }
         //сумма выпавших значений кубиков + бонусы, если есть

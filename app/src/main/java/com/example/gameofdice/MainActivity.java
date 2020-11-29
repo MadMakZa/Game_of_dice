@@ -14,18 +14,10 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private Button roll;
-    public ImageView cubeImageView1;
-    public ImageView cubeImageView2;
-    public ImageView cubeImageView3;
-    public Animation cubeAnim;
+    private ImageView cubeImageView1;
+    private ImageView cubeImageView2;
+    private ImageView cubeImageView3;
 
-    public Animation getCubeAnim() {
-        return cubeAnim;
-    }
-
-    public void setCubeAnim(Animation cubeAnim) {
-        this.cubeAnim = cubeAnim;
-    }
 
     public ImageView getCubeImageView1() {
         return cubeImageView1;
