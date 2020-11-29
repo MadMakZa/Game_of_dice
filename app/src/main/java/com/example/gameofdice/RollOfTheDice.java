@@ -77,7 +77,23 @@ public abstract class RollOfTheDice {
         //        int valueOfCube = cube1;
         switch (cube1){
             case 1:
-                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cubeImage1);
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
+                break;
+            case 2:
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube2);
+                break;
+            case 3:
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube3);
+                break;
+            case 4:
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube4);
+                break;
+            case 5:
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube5);
+                break;
+            case 6:
+                MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube6);
+                break;
         }
 
 
