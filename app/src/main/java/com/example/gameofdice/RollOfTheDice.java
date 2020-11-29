@@ -4,6 +4,7 @@ package com.example.gameofdice;
  * Бросок костей
  * */
 
+import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -146,5 +147,8 @@ public abstract class RollOfTheDice {
 
 
     }
+//    public void playSoundDices (MediaPlayer sound){
+//        sound.start();
+//    }
 
 }

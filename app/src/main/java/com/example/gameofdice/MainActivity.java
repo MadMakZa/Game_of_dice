@@ -3,6 +3,7 @@ package com.example.gameofdice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cubeImageView2;
     private ImageView cubeImageView3;
     private TextView scoreRound;
+//    private MediaPlayer soundDices;
 
 
     public ImageView getCubeImageView1() {
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
         cubeImageView3 = (ImageView) findViewById(R.id.cube_3);
         scoreRound = (TextView) findViewById(R.id.score_round);
+//        soundDices = MediaPlayer.create(this, R.drawable.diceSound);
 
         //кнопка бросить кубики
         roll = (Button) findViewById(R.id.roll);
