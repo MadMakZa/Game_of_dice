@@ -135,6 +135,7 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
                 break;
         }
+        MainActivity.getInstance().getScoreRound().setText(Integer.toString(sumPoints));
 
 
         Log.d("Бросок", "[" + getCube1()+ "]" +

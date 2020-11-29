@@ -61,10 +61,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         instance = this;
 
-        //присвоение переменным местоположение кубиков
+        //присвоение переменным местоположение на экране
         cubeImageView1 = (ImageView) findViewById(R.id.cube_1);
         cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
         cubeImageView3 = (ImageView) findViewById(R.id.cube_3);
+        scoreRound = (TextView) findViewById(R.id.score_round);
 
         //кнопка бросить кубики
         roll = (Button) findViewById(R.id.roll);
