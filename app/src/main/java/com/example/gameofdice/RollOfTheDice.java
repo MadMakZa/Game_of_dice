@@ -74,7 +74,7 @@ public abstract class RollOfTheDice {
 
     //вывод результата на экран
     public void showPoints(){
-        //        int valueOfCube = cube1;
+
         switch (cube1){
             case 1:
                 MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);

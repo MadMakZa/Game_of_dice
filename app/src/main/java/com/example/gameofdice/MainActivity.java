@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cubeImageView1;
     private ImageView cubeImageView2;
     private ImageView cubeImageView3;
+    private TextView scoreRound;
 
 
     public ImageView getCubeImageView1() {
@@ -36,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void setCubeImageView3(ImageView cubeImageView3) {
         this.cubeImageView3 = cubeImageView3;
+    }
+    public TextView getScoreRound() {
+        return scoreRound;
+    }
+    public void setScoreRound(TextView scoreRound) {
+        this.scoreRound = scoreRound;
     }
 
 
@@ -65,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 StartGame startGame = new StartGame();
-                startGame.CreatePlayers();
+                startGame.CreatePlayer();
 //                startGame.CreateComputer();
-                startGame.CompareResults();
+//                startGame.CompareResults();
 
 
             }

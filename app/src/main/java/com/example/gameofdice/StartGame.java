@@ -9,7 +9,7 @@ public class StartGame {
     private int computerPoints;
 
     //Создать player
-    public void CreatePlayers(){
+    public void CreatePlayer(){
         Player player1 = new Player();
         player1.createDices();
         player1.sumOfPoints();
