@@ -16,26 +16,32 @@ public abstract class RollOfTheDice {
     private int cube1;
     private int cube2;
     private int cube3;
-    private int sumPoints;
+    private int points;
+    private int comboPoints;
+    private int pointsAndCombo;
+
 
     public int getCube1() {
         return cube1;
     }
-
     public int getCube2() {
         return cube2;
     }
-
     public int getCube3() {
         return cube3;
     }
-
-    public int getSumPoints() {
-        return sumPoints;
+    public int getComboPoints() {
+        return comboPoints;
+    }
+    public int getPointsAndCombo() {
+        return pointsAndCombo;
+    }
+    public int getPoints() {
+        return points;
     }
 
-    public void setSumPoints(int sumPoints) {
-        this.sumPoints = sumPoints;
+    public void setPointsAndCombo(int pointsAndCombo) {
+        this.pointsAndCombo = pointsAndCombo;
     }
 
 
@@ -54,11 +60,11 @@ public abstract class RollOfTheDice {
     public void sumOfPoints(){
         //бонусы за 2 одинаковых кубика
         if(cube1==cube2||cube2==cube3||cube1==cube3){
-            sumPoints += 2;
+            pointsAndCombo += 2;
         //бонусы за 3 одинкаовых кубика
         }
         if(cube1==cube2 && cube1==cube3){
-            sumPoints +=1;
+            pointsAndCombo +=1;
         }
         //бонусы за street
         if(cube1+1 == cube2 && cube1+2 == cube3 ||
@@ -67,16 +73,16 @@ public abstract class RollOfTheDice {
            cube2-1 == cube1+1 && cube2-1 == cube3 ||
            cube3-1 == cube2 && cube3-2 == cube1 ||
            cube1-1 == cube2 && cube1-2 == cube3){
-            sumPoints +=3;
+            pointsAndCombo +=3;
         }
         //сумма выпавших значений кубиков + бонусы, если есть
-        sumPoints += getCube1()+getCube2()+getCube3();
+        pointsAndCombo += getCube1()+getCube2()+getCube3();
     }
 
-    //вывод результата на экран
-    public void showPoints(){
+    //показать картинки кубиков на экране
+    public void showSideDices() {
 
-        switch (cube1){
+        switch (cube1) {
             case 1:
                 MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
                 break;
@@ -96,7 +102,7 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube6);
                 break;
         }
-        switch (cube2){
+        switch (cube2) {
             case 1:
                 MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube1);
                 break;
@@ -116,7 +122,7 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube6);
                 break;
         }
-        switch (cube3){
+        switch (cube3) {
             case 1:
                 MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube1);
                 break;
@@ -136,19 +142,23 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
                 break;
         }
+            //для разработчика
+            Log.d("Бросок", "[" + getCube1() + "]" +
+                    "[" + getCube2() + "]" +
+                    "[" + getCube3() + "]" +
+                    "Points: " + getPointsAndCombo());
+
+
+    }
         //вывод суммы очков на экран
-        MainActivity.getInstance().getScoreRound().setText(Integer.toString(sumPoints));
+        public void showPoints() {
 
-        //для разработчика
-        Log.d("Бросок", "[" + getCube1()+ "]" +
-                "[" + getCube2() +"]" +
-                "[" + getCube3() +"]" +
-                "Points: " + getSumPoints());
+            MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
 
-
+        }
     }
 //    public void playSoundDices (MediaPlayer sound){
 //        sound.start();
 //    }
 
-}
+

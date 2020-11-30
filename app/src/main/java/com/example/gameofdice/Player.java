@@ -13,6 +13,11 @@ public class Player extends RollOfTheDice {
     }
 
     @Override
+    public void showSideDices() {
+        super.showSideDices();
+    }
+
+    @Override
     public void showPoints() {
         super.showPoints();
     }
