@@ -156,6 +156,9 @@ public abstract class RollOfTheDice {
 
             MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
 
+
+
+
             //для разработчика
             Log.d("Бросок", "[" + getCube1() + "]" +
                     "[" + getCube2() + "]" +
