@@ -76,7 +76,8 @@ public abstract class RollOfTheDice {
            cube3+1 == cube1 && cube3+2 == cube2 ||
            cube2-1 == cube1+1 && cube2-1 == cube3 ||
            cube3-1 == cube2 && cube3-2 == cube1 ||
-           cube1-1 == cube2 && cube1-2 == cube3){
+           cube1-1 == cube2 && cube1-2 == cube3 ||
+           cube1-2 == cube2 && cube1-1 == cube3 ){
             pointsAndCombo +=3;
             comboPoints = 3;
         }
