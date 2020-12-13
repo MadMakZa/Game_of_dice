@@ -35,17 +35,19 @@
         app:layout_constraintTop_toBottomOf="@+id/bank" />
 
     <LinearLayout
-        android:layout_width="379dp"
-        android:layout_height="568dp"
+        android:layout_width="382dp"
+        android:layout_height="523dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/roll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_round"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -53,24 +55,21 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:contentDescription="place_for_cube1"
-            app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+            android:contentDescription="place_for_cube1" />
 
         <ImageView
             android:id="@+id/cube_2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:contentDescription="place_for_cube2"
-            app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+            android:contentDescription="place_for_cube2" />
 
         <ImageView
             android:id="@+id/cube_3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:contentDescription="place_for_cube3"
-            app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+            android:contentDescription="place_for_cube3" />
 
     </LinearLayout>
 
