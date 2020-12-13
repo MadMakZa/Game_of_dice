@@ -13,6 +13,7 @@ public class StartGame {
         Player player1 = new Player();
         player1.createDices();
         player1.showSideDices();
+        player1.animationDices();
         player1.sumOfPoints();
         player1.showPoints();
         playerPoints = player1.getPointsAndCombo();

@@ -21,4 +21,9 @@ public class Player extends RollOfTheDice {
     public void showPoints() {
         super.showPoints();
     }
+
+    @Override
+    public void animationDices() {
+        super.animationDices();
+    }
 }

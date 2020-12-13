@@ -4,6 +4,8 @@ package com.example.gameofdice;
  * Бросок костей
  * */
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.animation.Animation;
@@ -19,6 +21,7 @@ public abstract class RollOfTheDice {
     private int points;
     private int comboPoints;
     private int pointsAndCombo;
+    ObjectAnimator animationX, animationY, rotateAnimation;
 
 
     public int getCube1() {
@@ -88,7 +91,6 @@ public abstract class RollOfTheDice {
 
     //показать картинки кубиков на экране
     public void showSideDices() {
-
         switch (cube1) {
             case 1:
                 MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
@@ -153,6 +155,25 @@ public abstract class RollOfTheDice {
 
 
     }
+    //анимация кубиков
+    public void animationDices(){
+        //генерация координат
+        Double generateX = (Double) (0 + Math.random() * 1000);
+        Double generateY = (Double) (500 + Math.random() * 1000);
+        float xEnd = generateX.floatValue();
+        float yEnd = generateY.floatValue();
+
+        AnimatorSet image1 = new AnimatorSet();
+        animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "x", -300f, xEnd);
+        animationY = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "y", -300f, yEnd);
+        rotateAnimation = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "rotation", 0f, 720f);
+        animationX.setDuration(1000);
+        animationY.setDuration(1000);
+        rotateAnimation.setDuration(1500);
+        image1.playTogether(animationX, animationY, rotateAnimation);
+        image1.start();
+    }
+
         //вывод суммы очков на экран
         public void showPoints() {
 
