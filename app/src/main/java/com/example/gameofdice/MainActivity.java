@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Dice 21 Points game
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Button roll;
