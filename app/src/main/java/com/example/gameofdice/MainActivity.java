@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cubeImageView2;
     private ImageView cubeImageView3;
     private TextView scoreRound;
+    private TextView scorePlayer;
+    private TextView scoreComp;
 //    private MediaPlayer soundDices;
 
 
@@ -50,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
     public void setScoreRound(TextView scoreRound) {
         this.scoreRound = scoreRound;
     }
+    public TextView getScorePlayer() {
+        return scorePlayer;
+    }
+    public void setScorePlayer(TextView scorePlayer) {
+        this.scorePlayer = scorePlayer;
+    }
+    public TextView getScoreComp() {
+        return scoreComp;
+    }
+    public void setScoreComp(TextView scoreComp) {
+        this.scoreComp = scoreComp;
+    }
 
 
     //для получения доступа к изменению переменных в этом классе
@@ -71,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
         cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
         cubeImageView3 = (ImageView) findViewById(R.id.cube_3);
         scoreRound = (TextView) findViewById(R.id.score_round);
-//        soundDices = MediaPlayer.create(this, R.drawable.diceSound);
+        scorePlayer = (TextView) findViewById(R.id.playerPoints);
+        scoreComp = (TextView) findViewById(R.id.compPoints);
 
         //кнопка бросить кубики
         roll = (Button) findViewById(R.id.roll);

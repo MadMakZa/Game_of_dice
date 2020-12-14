@@ -168,14 +168,14 @@ public abstract class RollOfTheDice {
     }
 
         //вывод суммы очков на экран
-        public void showPoints() {
+    public void showPoints() {
 
-            MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
-
-
+        MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
 
 
-            //для разработчика
+
+
+        //для разработчика
             Log.d("Бросок", "[" + getCube1() + "]" +
                     "[" + getCube2() + "]" +
                     "[" + getCube3() + "]" +
@@ -183,10 +183,12 @@ public abstract class RollOfTheDice {
                     "  Combo + " + getComboPoints() +
                     "  All Points:" + getPointsAndCombo());
 
-        }
     }
-//    public void playSoundDices (MediaPlayer sound){
-//        sound.start();
-//    }
+    public void showPlayerPoints() {
+
+        MainActivity.getInstance().getScorePlayer().setText(Integer.toString(pointsAndCombo));
+    }
+}
+
 
 

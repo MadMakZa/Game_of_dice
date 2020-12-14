@@ -18,6 +18,7 @@ public class StartGame {
         player1.animationDices();
         player1.sumOfPoints();
         player1.showPoints();
+        player1.showPlayerPoints();
         playerPoints = player1.getPointsAndCombo();
     }
     //Создать computer
