@@ -12,22 +12,20 @@ import android.widget.ImageView;
 public class AnimationCube {
 
     ObjectAnimator animationX, animationY, rotateAnimation;
+    //начальная точка броска кубиков
     public final float yStart = 2000f;
     public final float xStart = 500f;
-
+    //генерация точки приземления кубиков
     public float randomGeneratorX(){
-        Double generateX = (Double) (0 + Math.random() * 500);
+        Double generateX = (Double) (0 + Math.random() * 700);
         return generateX.floatValue();
-
     }
     public float randomGeneratorY(){
         Double generateY = (Double) (100 + Math.random() * 700);
         return generateY.floatValue();
-
     }
-
+    //анимация первого кубика
     public void animationFirstObject() {
-
         float xEnd = randomGeneratorX();
         float yEnd = randomGeneratorY();
 
@@ -41,7 +39,7 @@ public class AnimationCube {
         image1.playTogether(animationX, animationY, rotateAnimation);
         image1.start();
     }
-
+    //анимация второго кубика
     public void animationTwoObject() {
         float xEnd = randomGeneratorX();
         float yEnd = randomGeneratorY();
@@ -56,7 +54,7 @@ public class AnimationCube {
         image2.playTogether(animationX, animationY, rotateAnimation);
         image2.start();
     }
-
+    //анимация третьего кубика
     public void animationThreeObject() {
         float xEnd = randomGeneratorX();
         float yEnd = randomGeneratorY();
