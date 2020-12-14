@@ -2,8 +2,10 @@ package com.example.gameofdice;
 
 import android.util.Log;
 
+/**
+ * Этапы игры
+ */
 public class StartGame {
-    /***Этапы игры ***/
 
     private int playerPoints;
     private int computerPoints;
