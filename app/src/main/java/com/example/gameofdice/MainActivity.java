@@ -89,5 +89,11 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+
+    }
+
+    public void onClickPlayerField(View view) {
+        StartGame startGame = new StartGame();
+        startGame.CreatePlayer();
     }
 }

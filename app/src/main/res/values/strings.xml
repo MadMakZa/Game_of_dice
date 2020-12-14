@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Game of dice</string>
     <string name="Score">Score round</string>
+    <string name="Bank">Bank</string>
+    <string name="PlayerPoints">Pp</string>
+    <string name="ComputerPoints">Cp</string>
     <string name="Button_Roll">Roll</string>
+    <string name="Button_Bet">Bet</string>
 </resources>

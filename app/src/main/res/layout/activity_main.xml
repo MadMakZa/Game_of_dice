@@ -12,29 +12,33 @@
         android:id="@+id/bank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:paddingTop="10dp"
-        android:text="Bank"
+        android:shadowColor="@android:color/background_light"
+        android:text="@string/Bank"
+        android:textColor="@color/colorAccent"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/score_round"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="@string/Score"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bank" />
 
     <LinearLayout
+        android:id="@+id/playerField"
         android:layout_width="382dp"
         android:layout_height="523dp"
         android:layout_marginStart="8dp"
@@ -42,7 +46,8 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="onClickPlayerField"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/roll"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,12 +82,46 @@
         android:id="@+id/roll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/Button_Roll"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="@string/Button_Roll" />
+
+    <Button
+        android:id="@+id/bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Button_Bet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/playerPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/PlayerPoints"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank" />
+
+    <TextView
+        android:id="@+id/compPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/ComputerPoints"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
