@@ -91,12 +91,7 @@ public abstract class RollOfTheDice {
 
     //показать картинки кубиков на экране
     public void showSideDices() {
-        AnimationCube animCube1 = new AnimationCube();
-        AnimationCube animCube2 = new AnimationCube();
-        AnimationCube animCube3 = new AnimationCube();
-        animCube1.animationFirstObject();
-        animCube2.animationTwoObject();
-        animCube3.animationThreeObject();
+
         switch (cube1) {
             case 1:
                 MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
@@ -163,24 +158,12 @@ public abstract class RollOfTheDice {
     }
     //анимация кубиков
     public void animationDices(){
-        //1й кубик
-
-//            Double generateX = (Double) (0 + Math.random() * 500);
-//            Double generateY = (Double) (300 + Math.random() * 500);
-//            float xEnd = generateX.floatValue();
-//            float yEnd = generateY.floatValue();
-//
-//            AnimatorSet image1 = new AnimatorSet();
-//            animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "x", -300f, xEnd);
-//            animationY = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "y", -300f, yEnd);
-//            rotateAnimation = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "rotation", 0f, 720f);
-//            animationX.setDuration(1000);
-//            animationY.setDuration(1000);
-//            rotateAnimation.setDuration(1500);
-//            image1.playTogether(animationX, animationY, rotateAnimation);
-//            image1.start();
-
-
+        AnimationCube animCube1 = new AnimationCube();
+        AnimationCube animCube2 = new AnimationCube();
+        AnimationCube animCube3 = new AnimationCube();
+        animCube1.animationFirstObject();
+        animCube2.animationTwoObject();
+        animCube3.animationThreeObject();
 
     }
 
