@@ -13,8 +13,8 @@ public class AnimationCube {
 
     ObjectAnimator animationX, animationY, rotateAnimation;
     //начальная точка броска кубиков
-    public final float yStart = 2000f;
-    public final float xStart = 500f;
+    public final float yStart = 1800f;
+    public final float xStart = 480f;
 
     //генерация точки приземления кубиков
     public float randomGeneratorX(float a, float b){
@@ -35,8 +35,8 @@ public class AnimationCube {
     //анимация первого кубика
     public void animationFirstObject() {
         float xEnd = randomGeneratorX(0f, 200f);
-        float yEnd = randomGeneratorY(0f, 250f);
-        float rotate = randomRotation(180f, 750f);
+        float yEnd = randomGeneratorY(100f, 450f);
+        float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image1 = new AnimatorSet();
         animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView1(), "x", xStart, xEnd);
@@ -51,8 +51,8 @@ public class AnimationCube {
     //анимация второго кубика
     public void animationTwoObject() {
         float xEnd = randomGeneratorX(250f, 400f);
-        float yEnd = randomGeneratorY(0f, 250f);
-        float rotate = randomRotation(180f, 750f);
+        float yEnd = randomGeneratorY(100f, 450f);
+        float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image2 = new AnimatorSet();
         animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView2(), "x", xStart, xEnd);
@@ -66,9 +66,9 @@ public class AnimationCube {
     }
     //анимация третьего кубика
     public void animationThreeObject() {
-        float xEnd = randomGeneratorX(210f, 400f);
-        float yEnd = randomGeneratorY(250f, 500f);
-        float rotate = randomRotation(180f, 750f);
+        float xEnd = randomGeneratorX(270f, 400f);
+        float yEnd = randomGeneratorY(480f, 800f);
+        float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image3 = new AnimatorSet();
         animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView3(), "x", xStart, xEnd);
