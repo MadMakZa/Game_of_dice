@@ -170,7 +170,8 @@ public abstract class RollOfTheDice {
         //вывод суммы очков на экран
     public void showPoints() {
 
-        MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
+            MainActivity.getInstance().getScoreRound().setText(Integer.toString(pointsAndCombo));
+
 
 
 
