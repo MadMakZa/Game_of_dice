@@ -96,9 +96,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     //нажатие на игровое поле
-    public void onClickPlayerField(){
-
+    public void onClickPlayerField(View view) throws InterruptedException {
+//        winnerDialog();
+        startDialog();
     }
+
 
     //диалоговое окно ставок и броска кубиков
     public void startDialog(){
