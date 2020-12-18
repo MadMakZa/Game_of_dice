@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         scoreRound = (TextView) findViewById(R.id.score_round);
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);
+
     }
 
     @Override
@@ -87,12 +88,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         instance = this;
-
         init();
 
         //запуск стартового окна
         startDialog();
 
+
+    }
+    //нажатие на игровое поле
+    public void onClickPlayerField(){
 
     }
 
@@ -117,5 +121,12 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+    }
+    //диалог определяющий победителя
+    public void winnerDialog() {
+        final Dialog winnerDialog = new Dialog(this);
+        winnerDialog.setContentView(R.layout.dialog_winner);
+        winnerDialog.setTitle("Winner Dialog");
+        winnerDialog.show();
     }
 }
