@@ -2,6 +2,7 @@ package com.example.gameofdice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         instance = this;
 
         //запуск стартового окна
+        startDialog();
 
 
         //присвоение переменным местоположение на экране
@@ -109,9 +111,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    //бросок кубиков по нажатию на экран
+//    public void onClickPlayerField(View view) {
+//        StartGame startGame = new StartGame();
+//        startGame.CreatePlayer();
+//    }
+    //диалоговое окно ставок и броска кубиков
+    public void startDialog(){
+        final Dialog startDialog = new Dialog(this);
+        startDialog.setContentView(R.layout.dialog_start);
+        startDialog.setTitle("Start Dialog");
+        startDialog.show();
 
-    public void onClickPlayerField(View view) {
-        StartGame startGame = new StartGame();
-        startGame.CreatePlayer();
     }
 }
