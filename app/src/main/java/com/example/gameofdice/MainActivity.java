@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
                 StartGame startGame = new StartGame();
                 startGame.CreatePlayer();
+                startDialog.dismiss();
 
             }
         }
