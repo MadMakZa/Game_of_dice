@@ -89,33 +89,13 @@ public class MainActivity extends AppCompatActivity {
         instance = this;
 
         init();
+
         //запуск стартового окна
         startDialog();
 
 
-
-//        //кнопка бросить кубики
-//        roll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                StartGame startGame = new StartGame();
-//                startGame.CreatePlayer();
-////                startGame.CreateComputer();
-////                startGame.CompareResults();
-//
-//
-//            }
-//        }
-//        );
-
-
     }
-    //бросок кубиков по нажатию на экран
-//    public void onClickPlayerField(View view) {
-//        StartGame startGame = new StartGame();
-//        startGame.CreatePlayer();
-//    }
+
     //диалоговое окно ставок и броска кубиков
     public void startDialog(){
         final Dialog startDialog = new Dialog(this);
