@@ -19,7 +19,6 @@ import android.widget.TextView;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private Button roll;
     private ImageView cubeImageView1;
     private ImageView cubeImageView2;
     private ImageView cubeImageView3;
@@ -73,18 +72,7 @@ public class MainActivity extends AppCompatActivity {
         return instance;
     }
 
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        instance = this;
-
-        //запуск стартового окна
-        startDialog();
-
-
+    public void init() {
         //присвоение переменным местоположение на экране
         cubeImageView1 = (ImageView) findViewById(R.id.cube_1);
         cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
@@ -92,22 +80,34 @@ public class MainActivity extends AppCompatActivity {
         scoreRound = (TextView) findViewById(R.id.score_round);
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);
+    }
 
-        //кнопка бросить кубики
-        roll = (Button) findViewById(R.id.roll);
-        roll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        instance = this;
 
-                StartGame startGame = new StartGame();
-                startGame.CreatePlayer();
-//                startGame.CreateComputer();
-//                startGame.CompareResults();
+        init();
+        //запуск стартового окна
+        startDialog();
 
 
-            }
-        }
-        );
+
+//        //кнопка бросить кубики
+//        roll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                StartGame startGame = new StartGame();
+//                startGame.CreatePlayer();
+////                startGame.CreateComputer();
+////                startGame.CompareResults();
+//
+//
+//            }
+//        }
+//        );
 
 
     }
@@ -122,6 +122,19 @@ public class MainActivity extends AppCompatActivity {
         startDialog.setContentView(R.layout.dialog_start);
         startDialog.setTitle("Start Dialog");
         startDialog.show();
+
+        //кнопка бросить кубики
+        Button roll = (Button) startDialog.findViewById(R.id.roll);
+        roll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                StartGame startGame = new StartGame();
+                startGame.CreatePlayer();
+
+            }
+        }
+        );
 
     }
 }
