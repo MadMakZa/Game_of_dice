@@ -19,38 +19,38 @@ public class Bets {
     public static int getPlayerBet() {
         return playerBet;
     }
-    //убрать последнюю фишку
-    public void removeBet(){
+    //убрать последнюю фишку (доработать метод в дальнейшем)
+    public static void removeBet(){
         playerBet -= lastBet;
         lastBet = playerBet;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
     //удвоить ставку
-    public void doubleTheRate(){
+    public static void doubleTheRate(){
         playerBet *= 2;
         lastBet = playerBet;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
     //ставка +25
-    public void putTwentyFive(){
+    public static void putTwentyFive(){
         playerBet += 25;
         lastBet = 25;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
     //ставка +50
-    public void putFifty(){
+    public static void putFifty(){
         playerBet += 50;
         lastBet = 50;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
     //ставка +100
-    public void putOneHundred(){
+    public static void putOneHundred(){
         playerBet += 100;
         lastBet = 100;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
     //ставка +500
-    public void putFiveHundred(){
+    public static void putFiveHundred(){
         playerBet += 500;
         lastBet = 500;
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));

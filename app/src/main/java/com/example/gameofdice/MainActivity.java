@@ -18,6 +18,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.gameofdice.Bets.doubleTheRate;
+import static com.example.gameofdice.Bets.putFifty;
+import static com.example.gameofdice.Bets.putFiveHundred;
+import static com.example.gameofdice.Bets.putOneHundred;
+import static com.example.gameofdice.Bets.putTwentyFive;
+import static com.example.gameofdice.Bets.removeBet;
+
 /**
  * Dice 21 Points game
  */
@@ -136,8 +143,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "roll back!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.removeBet();
+                removeBet();
             }
         });
         //кнопка удвоить ставку
@@ -146,8 +152,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "bet x2!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.doubleTheRate();
+                doubleTheRate();
             }
         });
         //кнопка ставки +25
@@ -156,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 25!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.putTwentyFive();
+                putTwentyFive();
             }
         });
         //кнопка ставки +50
@@ -166,8 +170,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 50!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.putFifty();
+                putFifty();
             }
         });
         //кнопка ставки +100
@@ -176,8 +179,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 100!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.putOneHundred();
+                putOneHundred();
             }
         });
         //кнопка ставки +500
@@ -186,8 +188,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 500!", Toast.LENGTH_SHORT).show();
-                Bets bet = new Bets();
-                bet.putFiveHundred();
+                putFiveHundred();
             }
         });
         //кнопка бросить кубики
