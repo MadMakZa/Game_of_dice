@@ -2,6 +2,7 @@ package com.example.gameofdice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.media.Image;
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //диалоговое окно ставок и броска кубиков
+    @SuppressLint("SetTextI18n")
     public void startDialog(){
         final Dialog startDialog = new Dialog(this);
         startDialog.setContentView(R.layout.dialog_start);
@@ -128,6 +130,26 @@ public class MainActivity extends AppCompatActivity {
         bet = (TextView) startDialog.findViewById(R.id.bet);
         bet.setText(Integer.toString(Bets.getPlayerBet()));
 
+        //кнопка откатить ставку
+        ImageButton buttonBetRollBack = (ImageButton) startDialog.findViewById(R.id.btn_betRollBack);
+        buttonBetRollBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "roll back!", Toast.LENGTH_SHORT).show();
+                Bets bet = new Bets();
+                bet.removeBet();
+            }
+        });
+        //кнопка удвоить ставку
+        ImageButton buttonDoubleTheRate = (ImageButton) startDialog.findViewById(R.id.btn_betX2);
+        buttonDoubleTheRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "bet x2!", Toast.LENGTH_SHORT).show();
+                Bets bet = new Bets();
+                bet.doubleTheRate();
+            }
+        });
         //кнопка ставки +25
         ImageButton buttonBet25 = (ImageButton) startDialog.findViewById(R.id.id_token25);
         buttonBet25.setOnClickListener(new View.OnClickListener() {
