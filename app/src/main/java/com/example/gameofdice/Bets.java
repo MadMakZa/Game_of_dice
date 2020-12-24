@@ -10,7 +10,15 @@ import android.widget.Toast;
  * Делайте ваши ставки
  */
 
-public class Bets {
+public final class Bets {
 
+    private int playerBet = 0;
+
+
+    //ставки
+    public void putTwentyFive(){
+        playerBet+=25;
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
 
 }

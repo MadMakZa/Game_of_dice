@@ -28,6 +28,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView scoreRound;
     private TextView scorePlayer;
     private TextView scoreComp;
+    private TextView bet;
+
+    public TextView getBet() {
+        return bet;
+    }
+
+    public void setBet(TextView bet) {
+        this.bet = bet;
+    }
+
+
 
 
     public ImageView getCubeImageView1() {
@@ -83,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);
 
+
+
     }
 
     @Override
@@ -112,8 +125,9 @@ public class MainActivity extends AppCompatActivity {
         startDialog.show();
 
         //текущая ставка
-        TextView bet = (TextView) startDialog.findViewById(R.id.bet);
-        bet.setText(Integer.toString(0));
+        bet = (TextView) startDialog.findViewById(R.id.bet);
+
+
 
         //кнопки ставок
         ImageButton buttonBet25 = (ImageButton) startDialog.findViewById(R.id.id_token25);
@@ -121,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 25!", Toast.LENGTH_SHORT).show();
-
+                Bets bet25 = new Bets();
+                bet25.putTwentyFive();
             }
         });
         //кнопка бросить кубики
