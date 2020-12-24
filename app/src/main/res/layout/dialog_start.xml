@@ -32,8 +32,8 @@
 
         <TextView
             android:id="@+id/bet"
-            android:layout_width="67dp"
-            android:layout_height="31dp"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background_normal"
@@ -80,7 +80,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/token25" />
+                    android:background="@drawable/token25"
+                    />
 
                 <ImageButton
                     android:id="@+id/id_token50"
@@ -89,7 +90,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/token50" />
+                    android:background="@drawable/token50"
+                     />
 
                 <ImageButton
                     android:id="@+id/id_token100"
@@ -98,7 +100,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/token100" />
+                    android:background="@drawable/token100"
+                     />
 
                 <ImageButton
                     android:id="@+id/id_token500"
@@ -107,7 +110,8 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/token500" />
+                    android:background="@drawable/token500"
+                     />
 
             </LinearLayout>
         </HorizontalScrollView>
