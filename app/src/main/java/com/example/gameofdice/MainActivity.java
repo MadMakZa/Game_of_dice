@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //для получения доступа к изменению переменных в этом классе
+    //getter instance
     private static MainActivity instance;
     public static MainActivity getInstance(){
         return instance;
