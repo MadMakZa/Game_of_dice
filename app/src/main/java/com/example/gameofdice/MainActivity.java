@@ -126,17 +126,46 @@ public class MainActivity extends AppCompatActivity {
 
         //текущая ставка
         bet = (TextView) startDialog.findViewById(R.id.bet);
+        bet.setText(Integer.toString(Bets.getPlayerBet()));
 
-
-
-        //кнопки ставок
+        //кнопка ставки +25
         ImageButton buttonBet25 = (ImageButton) startDialog.findViewById(R.id.id_token25);
         buttonBet25.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 25!", Toast.LENGTH_SHORT).show();
-                Bets bet25 = new Bets();
-                bet25.putTwentyFive();
+                Bets bet = new Bets();
+                bet.putTwentyFive();
+            }
+        });
+        //кнопка ставки +50
+        ImageButton buttonBet50 = (ImageButton) startDialog.findViewById(R.id.id_token50);
+        buttonBet50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 50!", Toast.LENGTH_SHORT).show();
+                Bets bet = new Bets();
+                bet.putFifty();
+            }
+        });
+        //кнопка ставки +100
+        ImageButton buttonBet100 = (ImageButton) startDialog.findViewById(R.id.id_token100);
+        buttonBet100.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 100!", Toast.LENGTH_SHORT).show();
+                Bets bet = new Bets();
+                bet.putOneHundred();
+            }
+        });
+        //кнопка ставки +500
+        ImageButton buttonBet500 = (ImageButton) startDialog.findViewById(R.id.id_token500);
+        buttonBet500.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 500!", Toast.LENGTH_SHORT).show();
+                Bets bet = new Bets();
+                bet.putFiveHundred();
             }
         });
         //кнопка бросить кубики
