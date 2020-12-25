@@ -158,62 +158,62 @@ public abstract class RollOfTheDice {
 
             switch (cube1) {
                 case 1:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice1);
                     break;
                 case 2:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube2);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice2);
                     break;
                 case 3:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube3);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice3);
                     break;
                 case 4:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube4);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice4);
                     break;
                 case 5:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube5);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice5);
                     break;
                 case 6:
-                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube6);
+                    MainActivity.getInstance().getCubeImageView4().setImageResource(R.drawable.black_dice6);
                     break;
             }
             switch (cube2) {
                 case 1:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube1);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice1);
                     break;
                 case 2:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube2);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice2);
                     break;
                 case 3:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube3);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice3);
                     break;
                 case 4:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube4);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice4);
                     break;
                 case 5:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube5);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice5);
                     break;
                 case 6:
-                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube6);
+                    MainActivity.getInstance().getCubeImageView5().setImageResource(R.drawable.black_dice6);
                     break;
             }
             switch (cube3) {
                 case 1:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube1);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice1);
                     break;
                 case 2:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube2);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice2);
                     break;
                 case 3:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube3);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice3);
                     break;
                 case 4:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube4);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice4);
                     break;
                 case 5:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube5);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice5);
                     break;
                 case 6:
-                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
+                    MainActivity.getInstance().getCubeImageView6().setImageResource(R.drawable.black_dice6);
                     break;
             }
 
