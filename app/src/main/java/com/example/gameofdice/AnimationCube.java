@@ -80,6 +80,54 @@ public class AnimationCube {
         image3.playTogether(animationX, animationY, rotateAnimation);
         image3.start();
     }
+    //анимация первого черного кубика
+    public void animationBlackFirstObject() {
+        float xEnd = randomGeneratorX(0f, 200f);
+        float yEnd = randomGeneratorY(100f, 450f);
+        float rotate = randomRotation(380f, 750f);
+
+        AnimatorSet image4 = new AnimatorSet();
+        animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView4(), "x", xStart, xEnd);
+        animationY = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView4(), "y", yStart, yEnd);
+        rotateAnimation = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView4(), "rotation", 0f, rotate);
+        animationX.setDuration(1000);
+        animationY.setDuration(1000);
+        rotateAnimation.setDuration(1000);
+        image4.playTogether(animationX, animationY, rotateAnimation);
+        image4.start();
+    }
+    //анимация второго черного кубика
+    public void animationBlackTwoObject() {
+        float xEnd = randomGeneratorX(250f, 400f);
+        float yEnd = randomGeneratorY(100f, 450f);
+        float rotate = randomRotation(280f, 750f);
+
+        AnimatorSet image5 = new AnimatorSet();
+        animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView5(), "x", xStart, xEnd);
+        animationY = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView5(), "y", yStart, yEnd);
+        rotateAnimation = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView5(), "rotation", 0f, rotate);
+        animationX.setDuration(1000);
+        animationY.setDuration(1000);
+        rotateAnimation.setDuration(1000);
+        image5.playTogether(animationX, animationY, rotateAnimation);
+        image5.start();
+    }
+    //анимация третьего черного кубика
+    public void animationBlackThreeObject() {
+        float xEnd = randomGeneratorX(270f, 400f);
+        float yEnd = randomGeneratorY(480f, 800f);
+        float rotate = randomRotation(280f, 750f);
+
+        AnimatorSet image6 = new AnimatorSet();
+        animationX = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView6(), "x", xStart, xEnd);
+        animationY = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView6(), "y", yStart, yEnd);
+        rotateAnimation = ObjectAnimator.ofFloat(MainActivity.getInstance().getCubeImageView6(), "rotation", 0f, rotate);
+        animationX.setDuration(1000);
+        animationY.setDuration(1000);
+        rotateAnimation.setDuration(1000);
+        image6.playTogether(animationX, animationY, rotateAnimation);
+        image6.start();
+    }
 
 
 
