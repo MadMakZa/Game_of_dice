@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageView cubeImageView1;
     private ImageView cubeImageView2;
     private ImageView cubeImageView3;
+    private ImageView cubeImageView4;
+    private ImageView cubeImageView5;
+    private ImageView cubeImageView6;
     private TextView scoreRound;
     private TextView scorePlayer;
     private TextView scoreComp;
@@ -67,6 +70,29 @@ public class MainActivity extends AppCompatActivity {
     public void setCubeImageView3(ImageView cubeImageView3) {
         this.cubeImageView3 = cubeImageView3;
     }
+    public ImageView getCubeImageView4() {
+        return cubeImageView4;
+    }
+
+    public void setCubeImageView4(ImageView cubeImageView4) {
+        this.cubeImageView4 = cubeImageView4;
+    }
+
+    public ImageView getCubeImageView5() {
+        return cubeImageView5;
+    }
+
+    public void setCubeImageView5(ImageView cubeImageView5) {
+        this.cubeImageView5 = cubeImageView5;
+    }
+
+    public ImageView getCubeImageView6() {
+        return cubeImageView6;
+    }
+
+    public void setCubeImageView6(ImageView cubeImageView6) {
+        this.cubeImageView6 = cubeImageView6;
+    }
     public TextView getScoreRound() {
         return scoreRound;
     }
@@ -98,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
         cubeImageView1 = (ImageView) findViewById(R.id.cube_1);
         cubeImageView2 = (ImageView) findViewById(R.id.cube_2);
         cubeImageView3 = (ImageView) findViewById(R.id.cube_3);
+        cubeImageView4 = (ImageView) findViewById(R.id.cube_black1);
+        cubeImageView5 = (ImageView) findViewById(R.id.cube_black2);
+        cubeImageView6 = (ImageView) findViewById(R.id.cube_black3);
         scoreRound = (TextView) findViewById(R.id.score_round);
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);

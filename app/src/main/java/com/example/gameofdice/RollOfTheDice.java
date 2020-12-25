@@ -89,7 +89,7 @@ public abstract class RollOfTheDice {
         pointsAndCombo += getCube1()+getCube2()+getCube3();
     }
 
-    //показать картинки кубиков на экране
+    //показать картинки красных кубиков на экране
     public void showSideDices() {
 
         switch (cube1) {
@@ -152,8 +152,70 @@ public abstract class RollOfTheDice {
                 MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
                 break;
         }
+    }
+        //показать черные кубики
+        public void showSideBlackDices() {
 
-
+            switch (cube1) {
+                case 1:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube1);
+                    break;
+                case 2:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube2);
+                    break;
+                case 3:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube3);
+                    break;
+                case 4:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube4);
+                    break;
+                case 5:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube5);
+                    break;
+                case 6:
+                    MainActivity.getInstance().getCubeImageView1().setImageResource(R.drawable.cube6);
+                    break;
+            }
+            switch (cube2) {
+                case 1:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube1);
+                    break;
+                case 2:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube2);
+                    break;
+                case 3:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube3);
+                    break;
+                case 4:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube4);
+                    break;
+                case 5:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube5);
+                    break;
+                case 6:
+                    MainActivity.getInstance().getCubeImageView2().setImageResource(R.drawable.cube6);
+                    break;
+            }
+            switch (cube3) {
+                case 1:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube1);
+                    break;
+                case 2:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube2);
+                    break;
+                case 3:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube3);
+                    break;
+                case 4:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube4);
+                    break;
+                case 5:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube5);
+                    break;
+                case 6:
+                    MainActivity.getInstance().getCubeImageView3().setImageResource(R.drawable.cube6);
+                    break;
+            }
 
     }
     //анимация кубиков
