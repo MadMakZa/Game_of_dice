@@ -69,6 +69,26 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:contentDescription="place_for_cube3" />
+        <ImageView
+            android:id="@+id/cube_black1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:contentDescription="place_for_cube1" />
+
+        <ImageView
+            android:id="@+id/cube_black2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:contentDescription="place_for_cube2" />
+
+        <ImageView
+            android:id="@+id/cube_black3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:contentDescription="place_for_cube3" />
 
     </LinearLayout>
 
