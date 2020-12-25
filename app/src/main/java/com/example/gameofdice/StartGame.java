@@ -23,23 +23,25 @@ public class StartGame {
     }
     //Создать computer
     public void CreateComputer(){
-        Computer comp1 = new Computer();
-        comp1.createDices();
-        comp1.showSideDices();
-        comp1.sumOfPoints();
-        comp1.showPoints();
-        computerPoints = comp1.getPointsAndCombo();
+        Computer comp = new Computer();
+        comp.createDices();
+        comp.showSideBlackDices();
+        comp.animationBlackDices();
+        comp.sumOfPoints();
+        comp.showPoints();
+        comp.showComputerPoints();
+        computerPoints = comp.getPointsAndCombo();
     }
     //Сравнить результаты бросков
     public void CompareResults(){
         if(playerPoints > computerPoints){
-            Log.d("Если победил игрок", "Player is winner!");
+            Log.d("Бросок", "Player is winner!");
         }
         if(playerPoints < computerPoints){
-            Log.d("Если победил комп", "Computer is winner!");
+            Log.d("Бросок", "Computer is winner!");
         }
         if(playerPoints == computerPoints){
-            Log.d("Ничья", "Draw!");
+            Log.d("Бросок", "Draw!");
         }
     }
     //Вывод победителя
