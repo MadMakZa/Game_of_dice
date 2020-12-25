@@ -13,7 +13,21 @@ public class Computer extends RollOfTheDice {
     }
 
     @Override
+    public void showSideBlackDices() {
+        super.showSideBlackDices();
+    }
+
+    @Override
     public void showPoints() {
         super.showPoints();
+    }
+    @Override
+    public void showComputerPoints() {
+        super.showComputerPoints();
+    }
+
+    @Override
+    public void animationBlackDices() {
+        super.animationBlackDices();
     }
 }

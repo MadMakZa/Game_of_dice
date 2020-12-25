@@ -218,7 +218,7 @@ public abstract class RollOfTheDice {
             }
 
     }
-    //анимация кубиков
+    //анимация красных кубиков
     public void animationDices(){
         AnimationCube animCube1 = new AnimationCube();
         AnimationCube animCube2 = new AnimationCube();
@@ -226,6 +226,16 @@ public abstract class RollOfTheDice {
         animCube1.animationFirstObject();
         animCube2.animationTwoObject();
         animCube3.animationThreeObject();
+
+    }
+    //анимация черных кубиков
+    public void animationBlackDices(){
+        AnimationCube animCube4 = new AnimationCube();
+        AnimationCube animCube5 = new AnimationCube();
+        AnimationCube animCube6 = new AnimationCube();
+        animCube4.animationBlackFirstObject();
+        animCube5.animationBlackTwoObject();
+        animCube6.animationBlackThreeObject();
 
     }
 
@@ -250,6 +260,10 @@ public abstract class RollOfTheDice {
     public void showPlayerPoints() {
 
         MainActivity.getInstance().getScorePlayer().setText(Integer.toString(pointsAndCombo));
+    }
+    public void showComputerPoints() {
+
+        MainActivity.getInstance().getScoreComp().setText(Integer.toString(pointsAndCombo));
     }
 }
 
