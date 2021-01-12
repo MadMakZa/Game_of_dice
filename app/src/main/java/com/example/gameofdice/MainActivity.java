@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
         //текущая ставка
         bet = (TextView) startDialog.findViewById(R.id.bet);
-        bet.setText(Integer.toString(Bets.getPlayerBet()));
+        bet.setText(Integer.toString(Bets.sumBetsInList()));
 
         //кнопка откатить ставку
         ImageButton buttonBetRollBack = (ImageButton) startDialog.findViewById(R.id.btn_betRollBack);

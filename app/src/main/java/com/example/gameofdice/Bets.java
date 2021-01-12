@@ -22,48 +22,46 @@ public class Bets {
 //        return playerBet;
 //    }
 
-    LinkedList<Integer> betsList = new LinkedList<>();
+    static LinkedList<Integer> betsList = new LinkedList<>();
 
-    public void createBetsList() {
-        betsList.add(0);
+    public static int sumBetsInList(){
+        int sumBets = 0;
+        for (Integer i : betsList){
+            sumBets += i;
+        }
+        return sumBets;
     }
-
 
     //убрать последнюю фишку (доработать метод в дальнейшем использовать LinkedList)
     public static void removeBet(){
-        playerBet -= lastBet;
-        lastBet = playerBet;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+//        playerBet -= lastBet;
+//        lastBet = playerBet;
+//        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
-    //удвоить ставку
+//    //удвоить ставку
     public static void doubleTheRate(){
-        playerBet *= 2;
-        lastBet = playerBet;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+//        int doubleBet = sumBetsInList() * 2;
+//        MainActivity.getInstance().getBet().setText(Integer.toString(doubleBet));
     }
     //ставка +25
     public static void putTwentyFive(){
-        playerBet += 25;
-        lastBet = 25;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        betsList.add(25);
+        MainActivity.getInstance().getBet().setText(Integer.toString(betsList.get(0)));
     }
     //ставка +50
     public static void putFifty(){
-        playerBet += 50;
-        lastBet = 50;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        betsList.add(50);
+        MainActivity.getInstance().getBet().setText(Integer.toString(betsList.get(sumBetsInList())));
     }
     //ставка +100
     public static void putOneHundred(){
-        playerBet += 100;
-        lastBet = 100;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        betsList.add(100);
+        MainActivity.getInstance().getBet().setText(Integer.toString(betsList.get(sumBetsInList())));
     }
     //ставка +500
     public static void putFiveHundred(){
-        playerBet += 500;
-        lastBet = 500;
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        betsList.add(500);
+        MainActivity.getInstance().getBet().setText(Integer.toString(betsList.get(sumBetsInList())));
     }
 
 }
