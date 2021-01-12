@@ -14,16 +14,19 @@ import java.util.LinkedList;
 
 public class Bets {
     //синглтон
-    public static final Bets INSTANCE = new Bets();
-    private static int playerBet = 0;
-    private static int lastBet = 0;
+//    public static final Bets INSTANCE = new Bets();
+//    private static int playerBet = 0;
+//    private static int lastBet = 0;
+//
+//    public static int getPlayerBet() {
+//        return playerBet;
+//    }
 
-    public static int getPlayerBet() {
-        return playerBet;
+    LinkedList<Integer> betsList = new LinkedList<>();
+
+    public void createBetsList() {
+        betsList.add(0);
     }
-
-    LinkedList betsList = new LinkedList();
-    betsList.add("1");
 
 
     //убрать последнюю фишку (доработать метод в дальнейшем использовать LinkedList)
