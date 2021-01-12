@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.LinkedList;
+
 /**
  * Делайте ваши ставки
  */
@@ -19,6 +21,11 @@ public class Bets {
     public static int getPlayerBet() {
         return playerBet;
     }
+
+    LinkedList betsList = new LinkedList();
+    betsList.add("1");
+
+
     //убрать последнюю фишку (доработать метод в дальнейшем использовать LinkedList)
     public static void removeBet(){
         playerBet -= lastBet;
