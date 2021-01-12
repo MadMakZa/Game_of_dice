@@ -19,7 +19,7 @@ public class Bets {
     public static int getPlayerBet() {
         return playerBet;
     }
-    //убрать последнюю фишку (доработать метод в дальнейшем)
+    //убрать последнюю фишку (доработать метод в дальнейшем использовать LinkedList)
     public static void removeBet(){
         playerBet -= lastBet;
         lastBet = playerBet;
