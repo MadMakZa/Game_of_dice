@@ -44,8 +44,13 @@ public class Bets {
     }
 //    //удвоить ставку
     public static void doubleTheRate(){
-//        int doubleBet = sumBetsInList() * 2;
-//        MainActivity.getInstance().getBet().setText(Integer.toString(doubleBet));
+        if(!betsList.isEmpty()) {
+            betsList.add(playerBet);
+            sumBetsInList();
+            MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        }else {
+            //если 0, то диактивировать кнопку
+        }
     }
     //ставка +25
     public static void putTwentyFive(){
