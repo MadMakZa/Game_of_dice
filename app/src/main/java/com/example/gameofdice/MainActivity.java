@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.example.gameofdice.Bets.doubleTheRate;
+import static com.example.gameofdice.Bets.getPlayerBet;
 import static com.example.gameofdice.Bets.putFifty;
 import static com.example.gameofdice.Bets.putFiveHundred;
 import static com.example.gameofdice.Bets.putOneHundred;
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
         //текущая ставка
         bet = (TextView) startDialog.findViewById(R.id.bet);
-        bet.setText(Integer.toString(Bets.sumBetsInList()));
+        bet.setText(Integer.toString(Bets.getPlayerBet()));
 
         //кнопка откатить ставку
         ImageButton buttonBetRollBack = (ImageButton) startDialog.findViewById(R.id.btn_betRollBack);
