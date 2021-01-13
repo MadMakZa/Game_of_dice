@@ -52,6 +52,12 @@ public class Bets {
             //если 0, то диактивировать кнопку
         }
     }
+    //ставка +5
+    public static void putFive(){
+        betsList.add(5);
+        sumBetsInList();
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
     //ставка +25
     public static void putTwentyFive(){
         betsList.add(25);

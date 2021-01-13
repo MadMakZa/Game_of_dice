@@ -75,6 +75,16 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
+                    android:id="@+id/id_token5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/token5"
+                    />
+
+                <ImageButton
                     android:id="@+id/id_token25"
                     android:layout_width="50dp"
                     android:layout_height="50dp"

@@ -21,6 +21,7 @@ import android.widget.Toast;
 import static com.example.gameofdice.Bets.doubleTheRate;
 import static com.example.gameofdice.Bets.getPlayerBet;
 import static com.example.gameofdice.Bets.putFifty;
+import static com.example.gameofdice.Bets.putFive;
 import static com.example.gameofdice.Bets.putFiveHundred;
 import static com.example.gameofdice.Bets.putOneHundred;
 import static com.example.gameofdice.Bets.putTwentyFive;
@@ -183,6 +184,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "bet x2!", Toast.LENGTH_SHORT).show();
                 doubleTheRate();
+            }
+        });
+        //кнопка ставки +5
+        ImageButton buttonBet5 = (ImageButton) startDialog.findViewById(R.id.id_token5);
+        buttonBet5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 5!", Toast.LENGTH_SHORT).show();
+                putFive();
             }
         });
         //кнопка ставки +25
