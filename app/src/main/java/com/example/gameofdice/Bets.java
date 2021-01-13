@@ -42,7 +42,7 @@ public class Bets {
             //диактивировать кнопку назад
         }
     }
-//    //удвоить ставку
+    //удвоить ставку
     public static void doubleTheRate(){
         if(!betsList.isEmpty()) {
             betsList.add(playerBet);

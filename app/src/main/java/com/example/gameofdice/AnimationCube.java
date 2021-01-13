@@ -7,17 +7,17 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 /**
- * Анимация кубиков Кэп
+ * Анимация кубиков
  */
 public class AnimationCube {
 
     ObjectAnimator animationX, animationY, rotateAnimation;
     //начальная точка броска красных кубиков
-    public final float yStart = 1800f;
+    public final float yStart = 2500f;
     public final float xStart = 480f;
     //начальная точка броска черных кубиков
     public final float yBlackStart = -800f;
-    public final float xBlackStart = -600f;
+    public final float xBlackStart = -480f;
 
     //генерация точки приземления кубиков
     public float randomGeneratorX(float a, float b){
@@ -38,7 +38,7 @@ public class AnimationCube {
     //анимация первого кубика
     public void animationFirstObject() {
         float xEnd = randomGeneratorX(0f, 200f);
-        float yEnd = randomGeneratorY(100f, 450f);
+        float yEnd = randomGeneratorY(300f, 750f);
         float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image1 = new AnimatorSet();
@@ -54,7 +54,7 @@ public class AnimationCube {
     //анимация второго кубика
     public void animationTwoObject() {
         float xEnd = randomGeneratorX(250f, 400f);
-        float yEnd = randomGeneratorY(100f, 450f);
+        float yEnd = randomGeneratorY(300f, 850f);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image2 = new AnimatorSet();
@@ -70,7 +70,7 @@ public class AnimationCube {
     //анимация третьего кубика
     public void animationThreeObject() {
         float xEnd = randomGeneratorX(270f, 400f);
-        float yEnd = randomGeneratorY(480f, 800f);
+        float yEnd = randomGeneratorY(780f, 1000f);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image3 = new AnimatorSet();
@@ -85,8 +85,8 @@ public class AnimationCube {
     }
     //анимация первого черного кубика
     public void animationBlackFirstObject() {
-        float xEnd = randomGeneratorX(500f, 800f);
-        float yEnd = randomGeneratorY(500f, 850f);
+        float xEnd = randomGeneratorX(200f, 750f);
+        float yEnd = randomGeneratorY(500f, 950f);
         float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image4 = new AnimatorSet();
@@ -101,8 +101,8 @@ public class AnimationCube {
     }
     //анимация второго черного кубика
     public void animationBlackTwoObject() {
-        float xEnd = randomGeneratorX(500f, 800f);
-        float yEnd = randomGeneratorY(500f, 800f);
+        float xEnd = randomGeneratorX(100f, 750f);
+        float yEnd = randomGeneratorY(600f, 1000f);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image5 = new AnimatorSet();
@@ -117,8 +117,8 @@ public class AnimationCube {
     }
     //анимация третьего черного кубика
     public void animationBlackThreeObject() {
-        float xEnd = randomGeneratorX(500f, 800f);
-        float yEnd = randomGeneratorY(500f, 800f);
+        float xEnd = randomGeneratorX(300f, 750f);
+        float yEnd = randomGeneratorY(700f, 1050f);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image6 = new AnimatorSet();

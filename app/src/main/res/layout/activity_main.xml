@@ -39,8 +39,8 @@
 
     <LinearLayout
         android:id="@+id/playerField"
-        android:layout_width="400dp"
-        android:layout_height="550dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="1dp"
         android:onClick="onClickPlayerField"
         android:orientation="horizontal"
@@ -69,6 +69,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:contentDescription="place_for_cube3" />
+
         <ImageView
             android:id="@+id/cube_black1"
             android:layout_width="50dp"
