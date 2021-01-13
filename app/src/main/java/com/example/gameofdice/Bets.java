@@ -34,9 +34,13 @@ public class Bets {
 
     //убрать последнюю фишку (доработать метод в дальнейшем использовать LinkedList)
     public static void removeBet(){
-        betsList.removeLast();
-        sumBetsInList();
-        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        if(!betsList.isEmpty()) {
+            betsList.removeLast();
+            sumBetsInList();
+            MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+        } else {
+            //диактивировать кнопку назад
+        }
     }
 //    //удвоить ставку
     public static void doubleTheRate(){
