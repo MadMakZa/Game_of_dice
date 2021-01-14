@@ -52,9 +52,21 @@ public class Bets {
             //если 0, то диактивировать кнопку
         }
     }
+    //ставка +1
+    public static void putOne(){
+        betsList.add(1);
+        sumBetsInList();
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
     //ставка +5
     public static void putFive(){
         betsList.add(5);
+        sumBetsInList();
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
+    //ставка +10
+    public static void putTen(){
+        betsList.add(10);
         sumBetsInList();
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
@@ -76,9 +88,21 @@ public class Bets {
         sumBetsInList();
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }
+    //ставка +250
+    public static void putTwoHundredAndFifty(){
+        betsList.add(250);
+        sumBetsInList();
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
     //ставка +500
     public static void putFiveHundred(){
         betsList.add(500);
+        sumBetsInList();
+        MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
+    }
+    //ставка +1000
+    public static void putOneThousand(){
+        betsList.add(1000);
         sumBetsInList();
         MainActivity.getInstance().getBet().setText(Integer.toString(playerBet));
     }

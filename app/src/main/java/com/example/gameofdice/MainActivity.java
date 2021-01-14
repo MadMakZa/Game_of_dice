@@ -23,8 +23,11 @@ import static com.example.gameofdice.Bets.getPlayerBet;
 import static com.example.gameofdice.Bets.putFifty;
 import static com.example.gameofdice.Bets.putFive;
 import static com.example.gameofdice.Bets.putFiveHundred;
+import static com.example.gameofdice.Bets.putOne;
 import static com.example.gameofdice.Bets.putOneHundred;
+import static com.example.gameofdice.Bets.putOneThousand;
 import static com.example.gameofdice.Bets.putTwentyFive;
+import static com.example.gameofdice.Bets.putTwoHundredAndFifty;
 import static com.example.gameofdice.Bets.removeBet;
 
 /**
@@ -187,12 +190,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //кнопка ставки +1
-        ImageButton buttonBet5 = (ImageButton) startDialog.findViewById(R.id.id_token1);
-        buttonBet5.setOnClickListener(new View.OnClickListener() {
+        ImageButton buttonBet1 = (ImageButton) startDialog.findViewById(R.id.id_token1);
+        buttonBet1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 1!", Toast.LENGTH_SHORT).show();
-                putFive();
+                putOne();
             }
         });
         //кнопка ставки +5
@@ -231,6 +234,15 @@ public class MainActivity extends AppCompatActivity {
                 putOneHundred();
             }
         });
+        //кнопка ставки +250
+        ImageButton buttonBet250 = (ImageButton) startDialog.findViewById(R.id.id_token250);
+        buttonBet100.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 250!", Toast.LENGTH_SHORT).show();
+                putTwoHundredAndFifty();
+            }
+        });
         //кнопка ставки +500
         ImageButton buttonBet500 = (ImageButton) startDialog.findViewById(R.id.id_token500);
         buttonBet500.setOnClickListener(new View.OnClickListener() {
@@ -238,6 +250,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 500!", Toast.LENGTH_SHORT).show();
                 putFiveHundred();
+            }
+        });
+        //кнопка ставки +1000
+        ImageButton buttonBet1000 = (ImageButton) startDialog.findViewById(R.id.id_token1000);
+        buttonBet500.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 1000!", Toast.LENGTH_SHORT).show();
+                putOneThousand();
             }
         });
         //кнопка бросить кубики
