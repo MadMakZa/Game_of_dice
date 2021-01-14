@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //кнопка ставки +10
         ImageButton buttonBet10 = (ImageButton) startDialog.findViewById(R.id.id_token10);
-        buttonBet5.setOnClickListener(new View.OnClickListener() {
+        buttonBet10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 10!", Toast.LENGTH_SHORT).show();
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //кнопка ставки +250
         ImageButton buttonBet250 = (ImageButton) startDialog.findViewById(R.id.id_token250);
-        buttonBet100.setOnClickListener(new View.OnClickListener() {
+        buttonBet250.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 250!", Toast.LENGTH_SHORT).show();
@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
         });
         //кнопка ставки +1000
         ImageButton buttonBet1000 = (ImageButton) startDialog.findViewById(R.id.id_token1000);
-        buttonBet500.setOnClickListener(new View.OnClickListener() {
+        buttonBet1000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 1000!", Toast.LENGTH_SHORT).show();
