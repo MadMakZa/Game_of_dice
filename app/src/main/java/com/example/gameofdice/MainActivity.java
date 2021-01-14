@@ -26,6 +26,7 @@ import static com.example.gameofdice.Bets.putFiveHundred;
 import static com.example.gameofdice.Bets.putOne;
 import static com.example.gameofdice.Bets.putOneHundred;
 import static com.example.gameofdice.Bets.putOneThousand;
+import static com.example.gameofdice.Bets.putTen;
 import static com.example.gameofdice.Bets.putTwentyFive;
 import static com.example.gameofdice.Bets.putTwoHundredAndFifty;
 import static com.example.gameofdice.Bets.removeBet;
@@ -205,6 +206,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Bet 5!", Toast.LENGTH_SHORT).show();
                 putFive();
+            }
+        });
+        //кнопка ставки +10
+        ImageButton buttonBet10 = (ImageButton) startDialog.findViewById(R.id.id_token10);
+        buttonBet5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 10!", Toast.LENGTH_SHORT).show();
+                putTen();
             }
         });
         //кнопка ставки +25
