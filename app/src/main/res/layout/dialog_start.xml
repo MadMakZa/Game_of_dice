@@ -75,6 +75,16 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
+                    android:id="@+id/id_token1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/token1"
+                    />
+
+                <ImageButton
                     android:id="@+id/id_token5"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -82,6 +92,16 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/token5"
+                    />
+
+                <ImageButton
+                    android:id="@+id/id_token10"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/token10"
                     />
 
                 <ImageButton
@@ -115,6 +135,16 @@
                      />
 
                 <ImageButton
+                    android:id="@+id/id_token250"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/token250"
+                    />
+
+                <ImageButton
                     android:id="@+id/id_token500"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -123,6 +153,16 @@
                     android:layout_weight="1"
                     android:background="@drawable/token500"
                      />
+
+                <ImageButton
+                    android:id="@+id/id_token1000"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/token1000"
+                    />
 
             </LinearLayout>
         </HorizontalScrollView>

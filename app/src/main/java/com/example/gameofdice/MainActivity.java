@@ -186,6 +186,15 @@ public class MainActivity extends AppCompatActivity {
                 doubleTheRate();
             }
         });
+        //кнопка ставки +1
+        ImageButton buttonBet5 = (ImageButton) startDialog.findViewById(R.id.id_token1);
+        buttonBet5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Bet 1!", Toast.LENGTH_SHORT).show();
+                putFive();
+            }
+        });
         //кнопка ставки +5
         ImageButton buttonBet5 = (ImageButton) startDialog.findViewById(R.id.id_token5);
         buttonBet5.setOnClickListener(new View.OnClickListener() {
