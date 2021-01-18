@@ -46,16 +46,20 @@ public class MainActivity extends AppCompatActivity {
     private TextView scorePlayer;
     private TextView scoreComp;
     private TextView bet;
+    private TextView bankDepo;
 
+    public TextView getBankDepo() {
+        return bankDepo;
+    }
+    public void setBankDepo(TextView bankDepo) {
+        this.bankDepo = bankDepo;
+    }
     public TextView getBet() {
         return bet;
     }
-
     public void setBet(TextView bet) {
         this.bet = bet;
     }
-
-
 
 
     public ImageView getCubeImageView1() {
@@ -136,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         scoreRound = (TextView) findViewById(R.id.score_round);
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);
+        bankDepo = (TextView) findViewById(R.id.tv_bank_deposit);
 
 
 

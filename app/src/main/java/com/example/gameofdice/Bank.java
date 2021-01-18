@@ -6,7 +6,11 @@ package com.example.gameofdice;
 public class Bank {
 
     //депозит игрока
-    private int deposit = 10000;
+    private static int deposit = 10000;
+
+    public static void setDeposit(){
+        MainActivity.getInstance().getBankDepo().setText(Integer.toString(deposit));
+    }
 
 
 }
