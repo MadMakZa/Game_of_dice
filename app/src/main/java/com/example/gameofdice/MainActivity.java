@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView scoreComp;
     private TextView bet;
     private TextView bankDepo;
+    private Button bankReset;
 
     public TextView getBankDepo() {
         return bankDepo;
@@ -141,8 +142,7 @@ public class MainActivity extends AppCompatActivity {
         scorePlayer = (TextView) findViewById(R.id.playerPoints);
         scoreComp = (TextView) findViewById(R.id.compPoints);
         bankDepo = (TextView) findViewById(R.id.tv_bank_deposit);
-
-
+        bankReset = (Button) findViewById(R.id.bank);
 
     }
 
@@ -153,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
         instance = this;
         init();
 
+        //баланс счета
+        Bank.changeDeposit();
         //запуск стартового окна
         startDialog();
 
@@ -162,6 +164,18 @@ public class MainActivity extends AppCompatActivity {
     public void onClickPlayerField(View view) throws InterruptedException {
 //        winnerDialog();
         startDialog();
+    }
+
+    //обновить банк
+    public void onClickResetBank(View view){
+        bankReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bank.setDeposit(10000);
+                Bank.changeDeposit();
+                Toast.makeText(getApplicationContext(), "Deposit has been refreshed!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

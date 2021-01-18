@@ -5,12 +5,23 @@ package com.example.gameofdice;
  */
 public class Bank {
 
-    //депозит игрока
-    private static int deposit = 10000;
 
-    public static void setDeposit(){
+    //депозит игрока
+    private static int deposit = 1000;
+
+    public static int getDeposit() {
+        return deposit;
+    }
+    public static void setDeposit(int deposit) {
+        Bank.deposit = deposit;
+    }
+    //показать депозит
+    public static void changeDeposit(){
         MainActivity.getInstance().getBankDepo().setText(Integer.toString(deposit));
     }
+
+
+
 
 
 }
