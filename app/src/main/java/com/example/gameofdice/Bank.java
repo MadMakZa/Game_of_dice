@@ -6,7 +6,7 @@ package com.example.gameofdice;
 public class Bank {
 
     //депозит игрока
-    private int deposit = 1000;
+    private int deposit = 10000;
 
 
 }

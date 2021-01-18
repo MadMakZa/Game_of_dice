@@ -2,6 +2,7 @@
     <string name="app_name">Game of dice</string>
     <string name="Score">Score round</string>
     <string name="Bank">Bank</string>
+    <string name="BankDeposit">10000</string>
     <string name="PlayerPoints">Player Points</string>
     <string name="ComputerPoints">Computer Points</string>
     <string name="Button_Roll">Roll</string>
