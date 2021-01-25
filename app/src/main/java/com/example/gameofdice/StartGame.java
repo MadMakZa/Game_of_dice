@@ -2,6 +2,8 @@ package com.example.gameofdice;
 
 import android.util.Log;
 
+
+
 /**
  * Этапы игры
  */
@@ -34,11 +36,17 @@ public class StartGame {
     }
     //Сравнить результаты бросков
     public void CompareResults(){
+        //если игрок победил
         if(playerPoints > computerPoints){
             Log.d("Бросок", "Player is winner!");
+        Bank.setDeposit(Bank.getDeposit()+Bets.getPlayerBet());
+        Bank.changeDeposit();
+
         }
         if(playerPoints < computerPoints){
             Log.d("Бросок", "Computer is winner!");
+            Bank.setDeposit(Bank.getDeposit()-Bets.getPlayerBet());
+            Bank.changeDeposit();
         }
         if(playerPoints == computerPoints){
             Log.d("Бросок", "Draw!");
