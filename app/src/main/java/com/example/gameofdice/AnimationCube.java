@@ -15,12 +15,16 @@ public class AnimationCube {
 
 
     ObjectAnimator animationX, animationY, rotateAnimation;
+    //размеры дисплея
+    private final int displayHeight = MainActivity.getInstance().getScreenHeight();
+    private final int displayWidth = MainActivity.getInstance().getScreenWidth();
+
     //начальная точка броска красных кубиков
-    public final float yStart = MainActivity.getInstance().getScreenHeight();
-    public final float xStart = MainActivity.getInstance().getScreenWidth();
+    public final float yStart = displayHeight;
+    public final float xStart = displayWidth;
     //начальная точка броска черных кубиков
-    public final float yBlackStart = -MainActivity.getInstance().getScreenHeight();;
-    public final float xBlackStart = -MainActivity.getInstance().getScreenWidth();;
+    public final float yBlackStart = -displayHeight;
+    public final float xBlackStart = -displayWidth;
 
     //генерация точки приземления кубиков
     public float randomGeneratorX(float a, float b){
