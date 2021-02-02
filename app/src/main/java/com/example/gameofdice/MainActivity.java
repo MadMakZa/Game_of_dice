@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -48,7 +49,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView bet;
     private TextView bankDepo;
     private Button bankReset;
+    //записать размер дисплея устройства
+    private int screenWidth = 0; //ширина
+    private int screenHeight = 0; //высота
 
+    public int getScreenWidth() {
+        return screenWidth;
+    }
+
+    public int getScreenHeight() {
+        return screenHeight;
+    }
     public TextView getBankDepo() {
         return bankDepo;
     }
@@ -143,6 +154,11 @@ public class MainActivity extends AppCompatActivity {
         scoreComp = (TextView) findViewById(R.id.compPoints);
         bankDepo = (TextView) findViewById(R.id.tv_bank_deposit);
         bankReset = (Button) findViewById(R.id.bank);
+        //взять размер дисплея устройства
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        screenWidth = displayMetrics.widthPixels;
+        screenHeight = displayMetrics.heightPixels;
 
     }
 

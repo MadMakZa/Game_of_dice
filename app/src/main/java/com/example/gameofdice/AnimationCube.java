@@ -2,6 +2,8 @@ package com.example.gameofdice;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -11,13 +13,14 @@ import android.widget.ImageView;
  */
 public class AnimationCube {
 
+
     ObjectAnimator animationX, animationY, rotateAnimation;
     //начальная точка броска красных кубиков
-    public final float yStart = 2500f;
-    public final float xStart = 480f;
+    public final float yStart = MainActivity.getInstance().getScreenHeight();
+    public final float xStart = MainActivity.getInstance().getScreenWidth();
     //начальная точка броска черных кубиков
-    public final float yBlackStart = -800f;
-    public final float xBlackStart = -480f;
+    public final float yBlackStart = -MainActivity.getInstance().getScreenHeight();;
+    public final float xBlackStart = -MainActivity.getInstance().getScreenWidth();;
 
     //генерация точки приземления кубиков
     public float randomGeneratorX(float a, float b){
