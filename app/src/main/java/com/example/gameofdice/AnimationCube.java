@@ -44,8 +44,8 @@ public class AnimationCube {
 
     //анимация первого кубика
     public void animationFirstObject() {
-        float xEnd = randomGeneratorX(0f, 200f);
-        float yEnd = randomGeneratorY(300f, 750f);
+        float xEnd = randomGeneratorX((displayWidth/12f), displayWidth/3f);
+        float yEnd = randomGeneratorY(displayHeight/12f, displayHeight/2f);
         float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image1 = new AnimatorSet();
