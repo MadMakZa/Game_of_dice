@@ -18,6 +18,8 @@ public class AnimationCube {
     //размеры дисплея
     private final int displayHeight = MainActivity.getInstance().getScreenHeight();
     private final int displayWidth = MainActivity.getInstance().getScreenWidth();
+    //нужно найти 10 точек, 5 для красных кубиков 5 для черных
+    //затем с этими точками работать (добавлять прибавлять отступ)
 
     //начальная точка броска красных кубиков
     public final float yStart = displayHeight;
