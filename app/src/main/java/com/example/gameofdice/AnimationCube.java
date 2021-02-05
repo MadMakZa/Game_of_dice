@@ -16,24 +16,40 @@ public class AnimationCube {
 
     ObjectAnimator animationX, animationY, rotateAnimation;
     //размеры дисплея
-    private final int displayHeight = MainActivity.getInstance().getScreenHeight();
-    private final int displayWidth = MainActivity.getInstance().getScreenWidth();
+    private final float displayHeight = MainActivity.getInstance().getScreenHeight();
+    private final float displayWidth = MainActivity.getInstance().getScreenWidth();
     //точки для областей приземления кубиков
     //точка А1
     private final float a1_x = 100f;
     private final float a1_y = 100f;
     //точка B1
-    private final float b1_x = displayWidth/3f;
+    private final float b1_x = (displayWidth/3f)-300f;
     private final float b1_y = 100f;
     //точка C1
-    private final float c1_x = displayWidth-(displayWidth/3f);
+    private final float c1_x = (displayWidth-(displayWidth/3f)-300f);
     private final float c1_y = 100f;
     //точка D1
-    private final float d1_x = displayWidth;
+    private final float d1_x = displayWidth-300f;
     private final float d1_y = 100f;
     //точка E1
     private final float e1_x = 100f;
-    private final float e1_y = displayHeight/2f;
+    private final float e1_y = displayHeight/5f;
+    //черные кубики
+    //точка А2
+    private final float a2_x = 100f;
+    private final float a2_y = displayHeight/2f;
+    //точка B2
+    private final float b2_x = (displayWidth/3f)-100f;
+    private final float b2_y = displayHeight/2f;
+    //точка C2
+    private final float c2_x = (displayWidth-(displayWidth/3f)-100f);
+    private final float c2_y = displayHeight/2f;
+    //точка D2
+    private final float d2_x = displayWidth-100f;
+    private final float d2_y = displayHeight/2f;
+    //точка E2
+    private final float e2_x = 100f;
+    private final float e2_y = displayHeight-(displayHeight/4f);
 
 
     //начальная точка броска красных кубиков
@@ -109,8 +125,8 @@ public class AnimationCube {
     }
     //анимация первого черного кубика
     public void animationBlackFirstObject() {
-        float xEnd = randomGeneratorX(200f, 750f);
-        float yEnd = randomGeneratorY(500f, 950f);
+        float xEnd = randomGeneratorX(a2_x, b2_x);
+        float yEnd = randomGeneratorY(a2_y, e2_y);
         float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image4 = new AnimatorSet();
@@ -125,8 +141,8 @@ public class AnimationCube {
     }
     //анимация второго черного кубика
     public void animationBlackTwoObject() {
-        float xEnd = randomGeneratorX(100f, 750f);
-        float yEnd = randomGeneratorY(600f, 1000f);
+        float xEnd = randomGeneratorX(b2_x, c2_x);
+        float yEnd = randomGeneratorY(b2_y, e2_y);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image5 = new AnimatorSet();
@@ -141,8 +157,8 @@ public class AnimationCube {
     }
     //анимация третьего черного кубика
     public void animationBlackThreeObject() {
-        float xEnd = randomGeneratorX(300f, 750f);
-        float yEnd = randomGeneratorY(700f, 1050f);
+        float xEnd = randomGeneratorX(c2_x, d2_x);
+        float yEnd = randomGeneratorY(c2_y, e2_y);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image6 = new AnimatorSet();
