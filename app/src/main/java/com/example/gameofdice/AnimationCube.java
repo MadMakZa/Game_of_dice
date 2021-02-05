@@ -18,8 +18,23 @@ public class AnimationCube {
     //размеры дисплея
     private final int displayHeight = MainActivity.getInstance().getScreenHeight();
     private final int displayWidth = MainActivity.getInstance().getScreenWidth();
-    //нужно найти 10 точек, 5 для красных кубиков 5 для черных
-    //затем с этими точками работать (добавлять прибавлять отступ)
+    //точки для областей приземления кубиков
+    //точка А1
+    private final float a1_x = 100f;
+    private final float a1_y = 100f;
+    //точка B1
+    private final float b1_x = displayWidth/3f;
+    private final float b1_y = 100f;
+    //точка C1
+    private final float c1_x = displayWidth-(displayWidth/3f);
+    private final float c1_y = 100f;
+    //точка D1
+    private final float d1_x = displayWidth;
+    private final float d1_y = 100f;
+    //точка E1
+    private final float e1_x = 100f;
+    private final float e1_y = displayHeight/2f;
+
 
     //начальная точка броска красных кубиков
     public final float yStart = displayHeight;
@@ -46,8 +61,8 @@ public class AnimationCube {
 
     //анимация первого кубика
     public void animationFirstObject() {
-        float xEnd = randomGeneratorX((displayWidth/12f), displayWidth/3f);
-        float yEnd = randomGeneratorY(displayHeight/12f, displayHeight/2f);
+        float xEnd = randomGeneratorX(a1_x, b1_x);
+        float yEnd = randomGeneratorY(a1_y, e1_y);
         float rotate = randomRotation(380f, 750f);
 
         AnimatorSet image1 = new AnimatorSet();
@@ -62,8 +77,8 @@ public class AnimationCube {
     }
     //анимация второго кубика
     public void animationTwoObject() {
-        float xEnd = randomGeneratorX(250f, 400f);
-        float yEnd = randomGeneratorY(300f, 850f);
+        float xEnd = randomGeneratorX(b1_x, c1_x );
+        float yEnd = randomGeneratorY(b1_y, e1_y);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image2 = new AnimatorSet();
@@ -78,8 +93,8 @@ public class AnimationCube {
     }
     //анимация третьего кубика
     public void animationThreeObject() {
-        float xEnd = randomGeneratorX(270f, 400f);
-        float yEnd = randomGeneratorY(780f, 1000f);
+        float xEnd = randomGeneratorX(c1_x, d1_x);
+        float yEnd = randomGeneratorY(c1_y, e1_y);
         float rotate = randomRotation(280f, 750f);
 
         AnimatorSet image3 = new AnimatorSet();
