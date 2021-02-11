@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView bankDepo;
     private Button bankReset;
     //записать размер дисплея устройства
-    private int screenWidth = 0; //ширина
-    private int screenHeight = 0; //высота
+    private float screenWidth; //ширина
+    private float screenHeight; //высота
 
-    public int getScreenWidth() {
+    public float getScreenWidth() {
         return screenWidth;
     }
 
-    public int getScreenHeight() {
+    public float getScreenHeight() {
         return screenHeight;
     }
     public TextView getBankDepo() {
@@ -154,11 +154,7 @@ public class MainActivity extends AppCompatActivity {
         scoreComp = (TextView) findViewById(R.id.compPoints);
         bankDepo = (TextView) findViewById(R.id.tv_bank_deposit);
         bankReset = (Button) findViewById(R.id.bank);
-        //взять размер дисплея устройства
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        screenWidth = displayMetrics.widthPixels;
-        screenHeight = displayMetrics.heightPixels;
+
 
     }
 
@@ -167,6 +163,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         instance = this;
+        //взять размер дисплея устройства
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        screenWidth = (displayMetrics.widthPixels)/2f;
+        screenHeight = (displayMetrics.heightPixels)/2f;
+
         init();
 
         //баланс счета

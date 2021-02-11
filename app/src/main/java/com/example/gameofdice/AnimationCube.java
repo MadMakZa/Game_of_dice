@@ -16,20 +16,20 @@ public class AnimationCube {
 
     ObjectAnimator animationX, animationY, rotateAnimation;
     //размеры дисплея
-    private final float displayHeight = MainActivity.getInstance().getScreenHeight();
-    private final float displayWidth = MainActivity.getInstance().getScreenWidth();
+    private final float displayHeight = (float) MainActivity.getInstance().getScreenHeight();
+    private final float displayWidth = (float) MainActivity.getInstance().getScreenWidth();
     //точки для областей приземления кубиков
     //точка А1
     private final float a1_x = 100f;
     private final float a1_y = 100f;
     //точка B1
-    private final float b1_x = (displayWidth/3f)-300f;
+    private final float b1_x = (displayWidth/3f);
     private final float b1_y = 100f;
     //точка C1
-    private final float c1_x = (displayWidth-(displayWidth/3f)-300f);
+    private final float c1_x = (displayWidth-(displayWidth/3f));
     private final float c1_y = 100f;
     //точка D1
-    private final float d1_x = displayWidth-300f;
+    private final float d1_x = displayWidth;
     private final float d1_y = 100f;
     //точка E1
     private final float e1_x = 100f;
