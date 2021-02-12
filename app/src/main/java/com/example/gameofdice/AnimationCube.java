@@ -53,7 +53,7 @@ public class AnimationCube {
 
 
     //начальная точка броска красных кубиков
-    public final float yStart = displayHeight;
+    public final float yStart = displayHeight*2;
     public final float xStart = displayWidth;
     //начальная точка броска черных кубиков
     public final float yBlackStart = -displayHeight;
