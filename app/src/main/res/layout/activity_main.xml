@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/bank"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="53dp"
+        android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_round"
         tools:ignore="MissingConstraints">
 
         <ImageView

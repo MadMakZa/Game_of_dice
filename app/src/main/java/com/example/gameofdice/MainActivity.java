@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         //взять размер дисплея устройства
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        screenWidth = (displayMetrics.widthPixels)/2f;
+        screenWidth = (displayMetrics.widthPixels)/2.5f;
         screenHeight = (displayMetrics.heightPixels)/2f;
 
         init();
