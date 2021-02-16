@@ -51,7 +51,7 @@ public class AnimationCube {
     private final float e2_x = 200f;
     private final float e2_y = displayHeight-(displayHeight/4f);
     //отступ
-    private final float padding = 125f;
+    private final float padding = 115f;
 
 
     //начальная точка броска красных кубиков
